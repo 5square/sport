@@ -5,18 +5,24 @@ description: "archive"
 active: gallery
 header-img: "img/gallery-bg.jpg"
 images:
- - image_path: /gallery/albums/alb01.jpg
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1539893858/sports.5square.de/2018-10-07-san-francisco-49ers-vs-arizona-cardinals/IMG_2488.jpg
    gallery-folder: /gallery/gallery01/
    gallery-name: San Francisco 49ers vs. Arizona Cardinals
    gallery-date: October 2018
- - image_path: /gallery/albums/alb02.jpg
+   team-home: San Francisco 49ers
+   team-away: Arizona Cardinals
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1539893773/sports.5square.de/2018-10-06-san-jose-earthquakes-vs-red-bull-new-york/IMG_2464.jpg
    gallery-folder: /gallery/gallery02/
    gallery-name: San Jose Earthquakes vs. Red Bull New York
    gallery-date: October 2018
- - image_path: /gallery/albums/alb03.jpg
-   gallery-folder: /gallery/gallery03/
+   team-home: San Jose Earthquakes
+   team-away: Red Bull New York
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965212/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2743.jpg
+   gallery-folder: /gallery/2017-10-27-las-vegas-knights-vs-colorado-avalanche/
    gallery-name: Las Vegas Knights vs. Colorado Avalanche
    gallery-date: October 2017
+   team-home: Las Vegas Golden Knights
+   team-away: Colorado Avalanche
 ---
 
 <html class="no-js" lang="en">
@@ -48,7 +54,9 @@ images:
 					</header>	
 					<figcaption class='gallery-caption'>
 						<div class="entry-summary">
-							<h3>{{image.gallery-name}}</h3>
+              <h3>{{image.team-home}}</h3>
+              <h4>vs.</h4>
+              <h3>{{image.team-away}}</h3>
 							<p>{{image.gallery-date}}</p>
 						</div>
 					</figcaption>
