@@ -1,9 +1,9 @@
 # Site settings
-title: PHOTORAMA
+title: SPort Venues
 email: ""
-description: "Photo Journal"
-url: "https://sunbliss.github.io"
-baseurl: "/photorama"
+description: "Sport Venues"
+url: "https://5square.github.io"
+baseurl: "/sport"
 facebook_username: ""
 twitter_username: ""
 instagram_username: ""
