@@ -34,8 +34,8 @@ comments :
 # Internal nav
 nav:
   - GALLERY: "https://5square.github.io/sport/gallery/"  
-  - JOURNAL: "https://5square.github.io/sport/journal/"
   - ABOUT: "https://5square.github.io/sport/about/"
+  # - JOURNAL: "https://5square.github.io/sport/journal/"
 
 # All translation keys
 translations:
