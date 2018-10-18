@@ -1,6 +1,7 @@
 p h o t o r a m a 
 ====================
 
+<<<<<<< HEAD
 <!--- ![photorama](https://raw.githubusercontent.com/sunbliss/photorama/gh-pages/photorama_thumb.gif)
 
 ----------
@@ -8,12 +9,25 @@ p h o t o r a m a
 [DEMO](https://sunbliss.github.io/photorama/ "DEMO")
 
 ---------- --->
+=======
+![photorama](https://raw.githubusercontent.com/sunbliss/photorama/gh-pages/photorama_thumb.gif)
+
+----------
+
+---> [DEMO](https://sunbliss.github.io/photorama/ "DEMO")  <---
+
+----------
+>>>>>>> v2.2
 
 A theme for **jekyll**. 
 
 Created for gh-pages (project page).
 
+<<<<<<< HEAD
 This template was crafted having in mind the photobloggers and artists.
+=======
+This template was crafted having in mind the photobloggers.
+>>>>>>> v2.2
 
 It uses [Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll "Clean Blog") as its basis.
 
@@ -21,7 +35,10 @@ It uses [Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-bl
 ## Change Log
 
 ### Version 2.2 (4/23/2018)
+<<<<<<< HEAD
 Fork the <a href="https://github.com/sunbliss/photorama/tree/v2.2">latest version</a>
+=======
+>>>>>>> v2.2
 
 <a href="https://github.com/sunbliss/photorama/wiki/How-to-get-SSL-on-Jekyll%3F"> How to get SSL Certificate (Https) For Jekyll</a>
 
