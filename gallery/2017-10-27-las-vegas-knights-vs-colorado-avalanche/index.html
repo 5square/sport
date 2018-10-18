@@ -1,0 +1,127 @@
+---
+layout: page
+title: "Las Vegas"
+description: "masonry"
+active: gallery
+header-img: "img/gallery-bg.jpg"
+album-title: "my 1st album"
+images:
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965232/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2749.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965228/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2768.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965227/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2756.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965225/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2760.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965218/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2746.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965218/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2734.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965218/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2738.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965215/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2741.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965214/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2736.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965212/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2743.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509485096/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2742.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+ - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509484708/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2735.jpg
+   caption: IMAGE TITLE
+   copyright: © photorama
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>
