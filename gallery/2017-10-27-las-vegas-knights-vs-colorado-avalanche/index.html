@@ -5,13 +5,18 @@ description: "masonry"
 active: gallery
 header-img: "img/gallery-bg.jpg"
 album-title: "my 1st album"
+cloudinary-baseurl: "https://res.cloudinary.com/dqzz6rb2q/image/upload/"
+cloudinary-library: "v1509965232/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/"
+cloudinary-scale-option: "c_scale,w_500"
 images:
- - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965232/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2749.jpg
+ - image_path: IMG_2749.jpg
    caption: IMAGE TITLE
    copyright: © photorama
- - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965228/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2768.jpg
+ - image_path: IMG_2768.jpg
    caption: IMAGE TITLE
    copyright: © photorama
+---
+
  - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509965227/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2756.jpg
    caption: IMAGE TITLE
    copyright: © photorama
@@ -42,7 +47,6 @@ images:
  - image_path: https://res.cloudinary.com/dqzz6rb2q/image/upload/v1509484708/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/IMG_2735.jpg
    caption: IMAGE TITLE
    copyright: © photorama
----
 
 <html class="no-js" lang="en">
 <head>
@@ -64,9 +68,9 @@ images:
 
 				<figure class="gallery-item">
 					<header class='gallery-icon'>
-
-<a href="{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
-<img src="{{ image.image_path }}"></a>
+						
+<a href="{{ page.cloudinary-baseurl }}{{ page.cloudinary-library }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option }}{{ page.cloudinary-library }}{{ image.image_path }}"></a>
 						
 					</header>	
 					<figcaption class='gallery-caption'>
