@@ -3,51 +3,30 @@ layout: page-game
 title: "Las Vegas Golden Knights vs. Colorado Avalanche"
 venue: "T-Mobile Arena, Las Vegas, NV"
 result: "7 : 0"
+date: "2017-27-10"
 game-stats: "https://www.nhl.com/gamecenter/col-vs-vgk/2017/10/27/2017020149#game=2017020149,game_state=final"
 active: gallery
 header-img: "img/gallery-bg.jpg"
 cloudinary-baseurl: "https://res.cloudinary.com/dqzz6rb2q/image/upload/"
 cloudinary-library: "v1509965232/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/"
-cloudinary-scale-option: "c_scale,w_500"
+cloudinary-scale-option-thumb: "c_limit,h_500,w_500"
+cloudinary-scale-option-large: "c_limit,h_1500,w_1500"
 cloudinary-logo-home: https://res.cloudinary.com/dqzz6rb2q/image/upload/c_limit,h_200,w_200/v1539948036/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/220px-Vegas_Golden_Knights_logo.svg.png
 cloudinary-logo-away: https://res.cloudinary.com/dqzz6rb2q/image/upload/c_limit,h_200,w_200/v1539948065/sports.5square.de/2017-10-27-las-vegas-knights-vs-colorado-avalanche/2000px-Logo_Colorado_Avalanche.svg.png
+bg: IMG_2768.jpg
 images:
  - image_path: IMG_2749.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
  - image_path: IMG_2768.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
  - image_path: IMG_2756.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
  - image_path: IMG_2760.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
  - image_path: IMG_2746.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
  - image_path: IMG_2734.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
  - image_path: IMG_2738.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
  - image_path: IMG_2741.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
  - image_path: IMG_2736.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
  - image_path: IMG_2743.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
  - image_path: IMG_2742.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
  - image_path: IMG_2735.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
 ---
 
 <html class="no-js" lang="en">
@@ -70,14 +49,14 @@ images:
 				<figure class="gallery-item">
 					<header class='gallery-icon'>
 						
-<a href="{{ page.cloudinary-baseurl }}{{ page.cloudinary-library }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
-<img src="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option }}/{{ page.cloudinary-library }}{{ image.image_path }}"></a>
+<a href="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option-large }}/{{ page.cloudinary-library }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option-thumb }}/{{ page.cloudinary-library }}{{ image.image_path }}"></a>
 						
 					</header>	
 					<figcaption class='gallery-caption'>
 						<div class="entry-summary" id="{{ image.caption }}">
-							<h3>{{image.caption}}</h3>
-							<p>{{image.copyright}}</p>
+							<!--h3>{{image.caption}}</h3-->
+							<!--p>{{image.copyright}}</p-->
 						</div>
 					</figcaption>
 				</figure>
