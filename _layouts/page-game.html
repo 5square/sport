@@ -3,20 +3,31 @@ layout: default
 ---
 
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+<header class="intro-header" style="background-image: url('{{ page.cloudinary-baseurl }}{{ page.cloudinary-library }}{{ page.bg }}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-		    <span class="subheading">{{ page.title }}</span>
+		            <span class="subheading" style="margin-bottom: 1em;">{{ page.title }}</span>
                     <div>
-			<img src="{{ page.cloudinary-logo-home }}" style="display: inline">
-			<span style="font-size: 2em; margin: 0 1em 0 1em">vs.</span>
-			<img src="{{ page.cloudinary-logo-away }}" style="display: inline">
-		    </div>
-		    <span class="subheading">{{ page.result }}</span>
-                    <hr class="small">
+                        <div style="display: block; float:left; width: 40%; height: 200px;vertical-align: center;">
+                            <span style="display: inline-block; height: 100%; vertical-align: middle;"></span>
+			                <img src="{{ page.cloudinary-logo-home }}" style="display: inline">
+                        </div>
+                        <div style="display: table;float:left;width: 20%;vertical-align: middle; height: 200px;">
+                            <div style="font-size: 2em;display: table-cell;height: 200px;vertical-align: middle;">vs</div>
+                        </div>
+                        <div style="display: block; float:left; width: 40%; height: 200px;vertical-align: center;">
+                            <span style="display: inline-block; height: 100%; vertical-align: middle;"></span>
+                            <img src="{{ page.cloudinary-logo-away }}" style="display: inline">
+                        </div>
+		            </div>
+            
+                    <div style="display: inline">&nbsp;<hr class="small"></div>
+                    
+                    <span class="subheading">{{ page.result }}</span>
                     <span class="subheading">{{ page.venue }}</span>
+                    <span class="subheading">{{ page.date }}</span>
                 </div>
             </div>
         </div>
