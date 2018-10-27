@@ -1,0 +1,109 @@
+---
+layout: page-game
+title: "San Francisco 49ers vs. Arizona Cardinals"
+venue: "Levi's Stadium, Santa Clara, CA"
+result: "18 : 28"
+date: "2018-10-07"
+game-stats: "https://www.nfl.com/gamecenter/2018100710/2018/REG5/cardinals@49ers"
+active: gallery
+cloudinary-baseurl: "https://res.cloudinary.com/dqzz6rb2q/image/upload/"
+cloudinary-library: "v1539893862/sports.5square.de/2018-10-07-san-francisco-49ers-vs-arizona-cardinals/"
+cloudinary-scale-option-thumb: "c_limit,h_500,w_500"
+cloudinary-scale-option-large: "c_limit,h_1500,w_1500"
+cloudinary-logo-home: https://res.cloudinary.com/dqzz6rb2q/image/upload/c_limit,h_200,w_200/v1540675146/sports.5square.de/2018-10-07-san-francisco-49ers-vs-arizona-cardinals/500px-San_Francisco_49ers_logo.svg.png
+cloudinary-logo-away: https://res.cloudinary.com/dqzz6rb2q/image/upload/c_limit,h_200,w_200/v1540675291/sports.5square.de/2018-10-07-san-francisco-49ers-vs-arizona-cardinals/580b585b2edbce24c47b2aff.png
+bg: IMG_2488.jpg
+images:
+ - image_path: IMG_2478.jpg
+ - image_path: IMG_2479.jpg
+ - image_path: IMG_2480.jpg
+ - image_path: IMG_2481.jpg
+ - image_path: IMG_2482.jpg
+ - image_path: IMG_2483.jpg
+ - image_path: IMG_2485.jpg
+ - image_path: IMG_2486.jpg
+ - image_path: IMG_2488.jpg
+ - image_path: IMG_2491.jpg
+ - image_path: IMG_2492.jpg
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+						
+<a href="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option-large }}/{{ page.cloudinary-library }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option-thumb }}/{{ page.cloudinary-library }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<!--h3>{{image.caption}}</h3-->
+							<!--p>{{image.copyright}}</p-->
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>
