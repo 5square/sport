@@ -1,0 +1,106 @@
+---
+layout: page-game
+title: "VfB Stuttgart vs. Würzburger Kickers"
+venue: "Mercedes-Benz-Arena, Stuttgart, DE"
+result: "4 : 1"
+date: "2017-05-17"
+game-stats: "https://www.bundesliga.com/de/2bundesliga/spieltag/2016-2017/34-spielbegegnung-vfb_stuttgart-fc_wuerzburger_kickers.jsp?news"
+active: gallery
+cloudinary-baseurl: "https://res.cloudinary.com/dqzz6rb2q/image/upload/"
+cloudinary-library: "v1509965232/sports.5square.de/2017-05-17-vfb-stuttgart-wuerzburger-kickers/"
+cloudinary-scale-option-thumb: "c_limit,h_500,w_500"
+cloudinary-scale-option-large: "c_limit,h_1500,w_1500"
+cloudinary-logo-home: https://res.cloudinary.com/dqzz6rb2q/image/upload/c_limit,h_200,w_200/v1541022452/sports.5square.de/2017-05-17-vfb-stuttgart-wuerzburger-kickers/539px-VfB_Stuttgart_1893_Logo.svg_wbl5p5.png
+cloudinary-logo-away: https://res.cloudinary.com/dqzz6rb2q/image/upload/c_limit,h_200,w_200/v1541022491/sports.5square.de/2017-05-17-vfb-stuttgart-wuerzburger-kickers/598px-W_C3_BCrzburger_Kickers_Logo.svg_npnq2c.png
+bg: IMG_2067.jpg
+images:
+ - image_path: IMG_2056.jpg
+ - image_path: IMG_2057.jpg
+ - image_path: IMG_2062.jpg
+ - image_path: IMG_2067.jpg
+ - image_path: IMG_2069.jpg
+ - image_path: IMG_2070.jpg
+ - image_path: IMG_2071.jpg
+ - image_path: IMG_2073.jpg
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+						
+<a href="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option-large }}/{{ page.cloudinary-library }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option-thumb }}/{{ page.cloudinary-library }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<!--h3>{{image.caption}}</h3-->
+							<!--p>{{image.copyright}}</p-->
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>
