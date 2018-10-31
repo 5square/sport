@@ -1,0 +1,106 @@
+---
+layout: page-game
+title: "Miami Heat vs. Phoenix Suns"
+venue: "American Airlines Arena, Miama, FL"
+result: "96 : 104"
+date: "2009-11-03"
+game-stats: "http://www.espn.com/nba/game?gameId=291103014"
+active: gallery
+cloudinary-baseurl: "https://res.cloudinary.com/dqzz6rb2q/image/upload/"
+cloudinary-library: "v1509965232/sports.5square.de/2009-11-03-miami-heat-vs-phoenix-suns/"
+cloudinary-scale-option-thumb: "c_limit,h_500,w_500"
+cloudinary-scale-option-large: "c_limit,h_1500,w_1500"
+cloudinary-logo-home: https://res.cloudinary.com/dqzz6rb2q/image/upload/c_limit,h_200,w_200/v1541020978/sports.5square.de/2009-11-03-miami-heat-vs-phoenix-suns/566px-Miami_Heat_logo.svg.png
+cloudinary-logo-away: https://res.cloudinary.com/dqzz6rb2q/image/upload/c_limit,h_200,w_200/v1541021053/sports.5square.de/2009-11-03-miami-heat-vs-phoenix-suns/593px-Phoenix_Suns_logo.svg.png
+bg: 1017.jpg
+images:
+ - image_path: 1017.jpg
+ - image_path: 1020.jpg
+ - image_path: 1024.jpg
+ - image_path: 1026.jpg
+ - image_path: 1035.jpg
+ - image_path: 1042.jpg
+ - image_path: 1045.jpg
+ - image_path: 1051.jpg
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+						
+<a href="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option-large }}/{{ page.cloudinary-library }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option-thumb }}/{{ page.cloudinary-library }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<!--h3>{{image.caption}}</h3-->
+							<!--p>{{image.copyright}}</p-->
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>
