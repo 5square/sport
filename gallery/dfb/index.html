@@ -1,0 +1,128 @@
+---
+layout: page-venue
+venue: ""
+game-stats: ""
+active: gallery
+cloudinary-baseurl: "https://res.cloudinary.com/dqzz6rb2q/image/upload/"
+cloudinary-library: "v1509965232/sports.5square.de/dfb/"
+cloudinary-scale-option-thumb: "c_limit,h_500,w_500"
+cloudinary-scale-option-large: "c_limit,h_1500,w_1500"
+cloudinary-logo-home: 480px-DFB-Logo.svg
+bg: 20170904gernor60-6.jpg
+images:
+ - image_path: 20170904gernor60-1.jpg
+   match: Deutschland vs. Norwegen (6:0)
+   date: September 4th, 2017, Mercedes-Benz-Arena
+ - image_path: 20170904gernor60-2.jpg
+   match: Deutschland vs. Norwegen (6:0)
+   date: September 4th, 2017, Mercedes-Benz-Arena
+ - image_path: 20170904gernor60-3.jpg
+   match: Deutschland vs. Norwegen (6:0)
+   date: September 4th, 2017, Mercedes-Benz-Arena
+ - image_path: 20170904gernor60-4.jpg
+   match: Deutschland vs. Norwegen (6:0)
+   date: September 4th, 2017, Mercedes-Benz-Arena 
+ - image_path: 20170904gernor60-5.jpg
+   match: Deutschland vs. Norwegen (6:0)
+   date: September 4th, 2017, Mercedes-Benz-Arena
+ - image_path: 20170904gernor60-6.jpg
+   match: Deutschland vs. Norwegen (6:0)
+   date: September 4th, 2017, Mercedes-Benz-Arena
+ - image_path: 20170328u21gerpor01-1.jpg
+   match: U21 Deutschland vs. Portugal (0:1)
+   date: March 28th, 2017, Gazi Stadion
+ - image_path: 20170328u21gerpor01-2.jpg
+   match: U21 Deutschland vs. Portugal (0:1)
+   date: March 28th, 2017, Gazi Stadion
+ - image_path: 20170328u21gerpor01-3.jpg
+   match: U21 Deutschland vs. Portugal (0:1)
+   date: March 28th, 2017, Gazi Stadion
+ - image_path: 20170328u21gerpor01-4.jpg
+   match: U21 Deutschland vs. Portugal (0:1)
+   date: March 28th, 2017, Gazi Stadion
+ - image_path: 20170328u21gerpor01-5.jpg
+   match: U21 Deutschland vs. Portugal (0:1)
+   date: March 28th, 2017, Gazi Stadion
+   
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+						
+<a href="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option-large }}/{{ page.cloudinary-library }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ page.cloudinary-baseurl }}{{ page.cloudinary-scale-option-thumb }}/{{ page.cloudinary-library }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.match}}</h3>
+							<p>{{image.date}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>
